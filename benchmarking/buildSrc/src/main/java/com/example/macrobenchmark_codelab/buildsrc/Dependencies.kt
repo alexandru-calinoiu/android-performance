@@ -60,7 +60,7 @@ object Libs {
         }
 
         object Activity {
-            const val activityCompose = "androidx.activity:activity-compose:1.4.0"
+            const val activityCompose = "androidx.activity:activity-compose:1.7.0-alpha01"
         }
 
         object Lifecycle {

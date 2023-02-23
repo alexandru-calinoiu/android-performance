@@ -17,6 +17,7 @@
 package com.example.macrobenchmark_codelab.ui.home
 
 import android.content.res.Configuration
+import androidx.activity.compose.ReportDrawnWhen
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
@@ -105,6 +106,9 @@ private fun SnackCollectionList(
     modifier: Modifier = Modifier
 ) {
     var filtersVisible by rememberSaveable { mutableStateOf(false) }
+
+    ReportDrawnWhen { snackCollections.isNotEmpty() }
+
     Box(modifier) {
         LazyColumn(
             modifier = Modifier.testTag("snack_list"),
